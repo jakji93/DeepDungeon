@@ -50,3 +50,6 @@ TagManager:
   - name: Player
     uniqueID: 2824056603
     locked: 0
+  - name: Mouse
+    uniqueID: 3232628761
+    locked: 0
