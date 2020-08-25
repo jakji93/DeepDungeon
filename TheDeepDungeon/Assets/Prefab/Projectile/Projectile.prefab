@@ -137,11 +137,12 @@ MonoBehaviour:
   speed: 30
   lifeTime: 1.5
   damage: 0
-  rigidbody2D: {fileID: 0}
   whatIsSolid:
     serializedVersion: 2
     m_Bits: 256
   distance: 0.5
+  destroyObject: {fileID: 4043860419082162665, guid: 56bf0d40e467c024290be02caa958eb2,
+    type: 3}
 --- !u!58 &9100588456236779486
 CircleCollider2D:
   m_ObjectHideFlags: 0

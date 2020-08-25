@@ -9,11 +9,12 @@ public class Projectile : MonoBehaviour
     public int damage;
     public LayerMask whatIsSolid;
     public float distance;
+    public GameObject destroyObject;
 
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(gameObject, lifeTime);
+        Invoke("DestroyProjectile", lifeTime);
     }
 
     private void Update()
@@ -25,13 +26,20 @@ public class Projectile : MonoBehaviour
         {
             if (hitInfo.collider.CompareTag("ProjectileWall"))
             {
-                Destroy(gameObject);
+                DestroyProjectile();
             }
             if (hitInfo.collider.CompareTag("Enemy"))
             {
-                //do somehthing
+                DestroyProjectile();
             }
         }
         transform.position = newPosition;
+    }
+
+    private void DestroyProjectile()
+    {
+        GameObject cubeLeftOver = Instantiate(destroyObject, transform.position, Quaternion.identity);
+        Destroy(cubeLeftOver, 0.2f);
+        Destroy(gameObject);
     }
 }
