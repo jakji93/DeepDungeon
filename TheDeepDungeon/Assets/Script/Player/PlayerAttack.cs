@@ -6,6 +6,7 @@ public class PlayerAttack : MonoBehaviour
 {
     public GameObject projectile;
     public float attackSpeed = 0.5f;
+    public Transform shootingPostion;
 
     private float timeBtwShots;
 
@@ -18,7 +19,7 @@ public class PlayerAttack : MonoBehaviour
         {
             if (Input.GetAxisRaw("Fire1") == 1f)
             {
-                GameObject cubeShots = Instantiate(projectile, transform.position, Quaternion.identity);
+                GameObject cubeShots = Instantiate(projectile, shootingPostion.position, Quaternion.identity);
                 Vector2 direction = (shootingDirection - (Vector2)cubeShots.transform.position).normalized;
                 cubeShots.transform.up = direction;
                 timeBtwShots = attackSpeed;
