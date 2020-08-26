@@ -7,6 +7,7 @@ TagManager:
   - FootWall
   - ProjectileWall
   - Body
+  - AttackRune
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - 
   - Environment
   - Player
-  - 
+  - Rune
   - 
   - 
   - 
@@ -49,6 +50,9 @@ TagManager:
     locked: 0
   - name: Traps
     uniqueID: 153205071
+    locked: 0
+  - name: Runes
+    uniqueID: 1725237559
     locked: 0
   - name: Player
     uniqueID: 2824056603

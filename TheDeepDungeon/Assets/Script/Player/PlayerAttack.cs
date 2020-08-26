@@ -13,9 +13,14 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        FireProjectile();
+    }
+
+    private void FireProjectile()
+    {
         Vector2 shootingDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        if(timeBtwShots <= 0)
+        if (timeBtwShots <= 0)
         {
             if (Input.GetAxisRaw("Fire1") == 1f)
             {

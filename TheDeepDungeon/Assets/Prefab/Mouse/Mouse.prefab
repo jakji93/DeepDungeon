@@ -83,6 +83,7 @@ GameObject:
   - component: {fileID: 8895981004375583190}
   - component: {fileID: 8895981004375583191}
   - component: {fileID: 1416052056}
+  - component: {fileID: 8895981005644158082}
   m_Layer: 0
   m_Name: Mouse
   m_TagString: Untagged
@@ -192,7 +193,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1062338535
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -743993637346440335, guid: fd65c8d10bd1ce54f842b88cfd370e9c,
     type: 3}
@@ -225,3 +226,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8895981005644158082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8895981004375583187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb5e1b14110f74e4daadb7554cfb6c4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rune1: {fileID: 6899045944369481833, guid: e9b2943398d7ecd43b2f8ee988ab1db5, type: 3}
