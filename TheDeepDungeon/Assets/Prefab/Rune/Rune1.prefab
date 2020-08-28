@@ -140,6 +140,7 @@ GameObject:
   - component: {fileID: 7893434566714932338}
   - component: {fileID: 8297403828826401718}
   - component: {fileID: 5741377051500882506}
+  - component: {fileID: 6385726014288922852}
   m_Layer: 10
   m_Name: Rune1
   m_TagString: AttackRune
@@ -321,3 +322,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runeConfig: {fileID: 11400000, guid: 91a2c74e90f15834c84747acb090139d, type: 2}
+--- !u!58 &6385726014288922852
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6899045944369481833}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2.5

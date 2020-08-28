@@ -1,8 +1,9 @@
-﻿using System.Collections;
+﻿using Game.Projectile;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackRune : MonoBehaviour
+public class AttackRune : MonoBehaviour, IProjectileInteract
 {
     public RuneConfig runeConfig;
 
@@ -27,5 +28,14 @@ public class AttackRune : MonoBehaviour
     public int GetCost()
     {
         return runeConfig.GetCost();
+    }
+
+    public void Interact(Projectile projectile)
+    {
+        if (!projectile.GetAttackedRuneEntered())
+        {
+            Debug.Log("attack rune entered");
+            projectile.SetAttackRuneEntered(true);
+        }
     }
 }

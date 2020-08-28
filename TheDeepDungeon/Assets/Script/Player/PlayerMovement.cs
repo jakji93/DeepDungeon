@@ -30,7 +30,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //rigidbody2D.MovePosition(rigidbody2D.position + movement * moveSpeed * Time.fixedDeltaTime);
         rigidbody2D.velocity = new Vector2(movement.x, movement.y) * moveSpeed;
     }
 
