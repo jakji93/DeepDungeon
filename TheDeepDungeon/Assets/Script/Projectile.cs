@@ -8,7 +8,6 @@ public class Projectile : MonoBehaviour
     public float lifeTime;
     public int damage;
     public LayerMask whatIsSolid;
-    public float distance;
     public GameObject destroyObject;
 
     // Start is called before the first frame update
@@ -21,7 +20,7 @@ public class Projectile : MonoBehaviour
     {
         Vector2 currentPosition = new Vector2(transform.position.x, transform.position.y);
         Vector2 newPosition = currentPosition + (Vector2)transform.up * speed * Time.deltaTime;
-        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.up, distance, whatIsSolid);
+        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.up, speed * Time.deltaTime, whatIsSolid);
         if(hitInfo.collider != null)
         {
             if (hitInfo.collider.CompareTag("ProjectileWall"))

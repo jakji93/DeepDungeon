@@ -19,7 +19,7 @@ public class AttackRune : MonoBehaviour
         
     }
 
-    private void DestroyRune()
+    public void DestroyRune()
     {
         Destroy(gameObject);
     }

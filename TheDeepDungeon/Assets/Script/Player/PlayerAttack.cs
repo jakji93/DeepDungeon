@@ -22,7 +22,7 @@ public class PlayerAttack : MonoBehaviour
 
         if (timeBtwShots <= 0)
         {
-            if (Input.GetAxisRaw("Fire1") == 1f)
+            if (Input.GetAxisRaw("Fire3") == 1f)
             {
                 GameObject cubeShots = Instantiate(projectile, shootingPostion.position, Quaternion.identity);
                 Vector2 direction = (shootingDirection - (Vector2)cubeShots.transform.position).normalized;
