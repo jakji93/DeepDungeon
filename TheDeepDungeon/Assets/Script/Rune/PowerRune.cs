@@ -1,11 +1,10 @@
-﻿using Game.Projectiles;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace Game.Runes
 {
-    public class AttackRune : MonoBehaviour, IProjectileInteract, IRune
+    public class PowerRune : MonoBehaviour, IRune
     {
         public RuneConfig runeConfig;
 
@@ -22,28 +21,19 @@ namespace Game.Runes
 
         }
 
-        public void DestroyRune()
-        {
-            Destroy(gameObject);
-        }
-
         public int GetCost()
         {
             return runeConfig.GetCost();
         }
 
-        public void Interact(Projectile projectile)
-        {
-            if (!projectile.GetAttackedRuneEntered())
-            {
-                Debug.Log("attack rune entered");
-                projectile.SetAttackRuneEntered(true);
-            }
-        }
-
         public bool GetIsBuffRune()
         {
             return runeConfig.GetIsBuffRune();
+        }
+
+        public void DestroyRune()
+        {
+            Destroy(gameObject);
         }
     } 
 }

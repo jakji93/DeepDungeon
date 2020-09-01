@@ -6,6 +6,7 @@ public class Health : MonoBehaviour
 {
     public int maxHealth;
     public Animator animator;
+    public HealthBarDisplay healthDisplay;
 
     private int currentHealth;
     private bool isAlreadyDead = false;
@@ -13,6 +14,7 @@ public class Health : MonoBehaviour
     private void Start()
     {
         currentHealth = maxHealth;
+        if (healthDisplay != null) healthDisplay.SetHealth(currentHealth, maxHealth);
     }
 
     public void DealDamage(int damage)
@@ -23,22 +25,19 @@ public class Health : MonoBehaviour
         {
             Death();
         }
+        if(healthDisplay != null) healthDisplay.SetHealth(currentHealth, maxHealth);
     }
 
     private void Death()
     {
         if(animator != null) animator.SetTrigger("death");
         isAlreadyDead = true;
+        Destroy(gameObject);
     }
 
     public bool GetAlreadyDead()
     {
         return isAlreadyDead;
-    }
-
-    public void DestroyObject()
-    {
-        Destroy(gameObject);
     }
 
     public void RegenerateHealth(int health)

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Game.Runes;
 
 public class ActivateRune : MonoBehaviour
 {
@@ -28,8 +29,10 @@ public class ActivateRune : MonoBehaviour
 
     private void ActiveRune(GameObject rune)
     {
-        var currentRunes = GameObject.FindWithTag(rune.tag);
-        if (currentRunes != null) Destroy(currentRunes);
-        Instantiate(rune, transform.position, Quaternion.identity);
+        var currentRune = GameObject.FindWithTag(rune.tag);
+        if (currentRune != null) Destroy(currentRune);
+        var isBuffRune = rune.GetComponent<IRune>().GetIsBuffRune();
+        if (isBuffRune) Instantiate(rune, GameObject.FindWithTag("Player").transform.position, Quaternion.identity);
+        else Instantiate(rune, transform.position, Quaternion.identity);
     }
 }

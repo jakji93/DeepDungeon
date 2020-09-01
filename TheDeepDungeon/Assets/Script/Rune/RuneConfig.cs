@@ -2,25 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Rune Config")]
-public class RuneConfig : ScriptableObject
+namespace Game.Runes
 {
-    public float lifeTime;
-    public float size;
-    public int cost;
-
-    public float GetLifeTime()
+    [CreateAssetMenu(menuName = "Rune Config")]
+    public class RuneConfig : ScriptableObject
     {
-        return lifeTime;
-    }
+        public float lifeTime;
+        public float size;
+        public int cost;
+        public bool IsBuffRune;
 
-    public float GetSize()
-    {
-        return size;
-    }
+        public float GetLifeTime()
+        {
+            return lifeTime;
+        }
 
-    public int GetCost()
-    {
-        return cost;
-    }
+        public float GetSize()
+        {
+            return size;
+        }
+
+        public int GetCost()
+        {
+            return cost;
+        }
+
+        public bool GetIsBuffRune()
+        {
+            return IsBuffRune;
+        }
+    } 
 }

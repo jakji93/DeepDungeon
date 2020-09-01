@@ -9,6 +9,7 @@ TagManager:
   - Body
   - AttackRune
   - PowerRune
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - Environment
   - Player
   - Rune
-  - 
+  - Enemy
   - 
   - 
   - 

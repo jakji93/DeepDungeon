@@ -134,16 +134,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a1b2e6d1e5296d49bf1d9a8a5e8cf62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 40
   lifeTime: 1.5
-  damage: 0
+  damage: 10
   whatIsSolid:
     serializedVersion: 2
-    m_Bits: 1280
+    m_Bits: 3328
   destroyObject: {fileID: 4043860419082162665, guid: 56bf0d40e467c024290be02caa958eb2,
     type: 3}
   tagNames:
-  - Enemy
+  - Body
   - ProjectileWall
   - AttackRune
 --- !u!58 &9100588456236779486

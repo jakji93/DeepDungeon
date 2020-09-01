@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Game.Projectile
+namespace Game.Projectiles
 {
     public class Projectile : MonoBehaviour
     {
@@ -14,6 +14,7 @@ namespace Game.Projectile
         public List<string> tagNames;
 
         private bool isAttackRuneEntered = false;
+        private bool isEnemyHit = false;
 
         // Start is called before the first frame update
         void Start()
@@ -25,15 +26,18 @@ namespace Game.Projectile
         {
             Vector2 currentPosition = new Vector2(transform.position.x, transform.position.y);
             Vector2 newPosition = currentPosition + (Vector2)transform.up * speed * Time.deltaTime;
-            RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.up, speed * Time.deltaTime, whatIsSolid);
-            if (hitInfo.collider != null)
+            var hitInfos = Physics2D.RaycastAll(transform.position, transform.up, speed * Time.deltaTime, whatIsSolid);
+            foreach (var hitInfo in hitInfos)
             {
-                if (tagNames.Contains(hitInfo.collider.tag))
+                if (hitInfo.collider != null)
                 {
-                    var interacts = hitInfo.collider.gameObject.GetComponents<IProjectileInteract>();
-                    foreach(var interact in interacts)
+                    if (tagNames.Contains(hitInfo.collider.tag))
                     {
-                        interact.Interact(this);
+                        var interacts = hitInfo.collider.gameObject.GetComponents<IProjectileInteract>();
+                        foreach (var interact in interacts)
+                        {
+                            interact.Interact(this);
+                        }
                     }
                 }
             }
@@ -55,6 +59,16 @@ namespace Game.Projectile
         public bool GetAttackedRuneEntered()
         {
             return isAttackRuneEntered;
+        }
+
+        public void SetIsEnemyHit(bool hit)
+        {
+            isEnemyHit = hit;
+        }
+
+        public bool GetIsEnemyHit()
+        {
+            return isEnemyHit;
         }
     }
 }

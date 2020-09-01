@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &666990250746068884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6489210064485746953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9920dfff7073ed6429132415c9af2da5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runeConfig: {fileID: 11400000, guid: b438e66fe6c8fd14ca0c05f10650d5f0, type: 2}
 --- !u!1001 &409857904895459680
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1889,5 +1902,12 @@ PrefabInstance:
       propertyPath: m_ShapePath.Array.data[87].y
       value: 0.19615099
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5741377051500882506, guid: e9b2943398d7ecd43b2f8ee988ab1db5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e9b2943398d7ecd43b2f8ee988ab1db5, type: 3}
+--- !u!1 &6489210064485746953 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6899045944369481833, guid: e9b2943398d7ecd43b2f8ee988ab1db5,
+    type: 3}
+  m_PrefabInstance: {fileID: 409857904895459680}
+  m_PrefabAsset: {fileID: 0}

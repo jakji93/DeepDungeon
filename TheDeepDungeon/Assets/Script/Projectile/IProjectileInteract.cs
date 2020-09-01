@@ -1,4 +1,4 @@
-﻿namespace Game.Projectile
+﻿namespace Game.Projectiles
 {
     public interface IProjectileInteract
     {
