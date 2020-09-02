@@ -322,6 +322,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runeConfig: {fileID: 11400000, guid: 91a2c74e90f15834c84747acb090139d, type: 2}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 2048
+  damageReductionInRune: 0.5
 --- !u!58 &6385726014288922852
 CircleCollider2D:
   m_ObjectHideFlags: 0

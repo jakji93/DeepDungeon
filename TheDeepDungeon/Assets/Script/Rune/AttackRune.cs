@@ -8,18 +8,14 @@ namespace Game.Runes
     public class AttackRune : MonoBehaviour, IProjectileInteract, IRune
     {
         public RuneConfig runeConfig;
+        public LayerMask layerMask;
+        public float damageReductionInRune;
 
         // Start is called before the first frame update
         void Start()
         {
             Invoke("DestroyRune", runeConfig.GetLifeTime());
             transform.localScale = transform.localScale * runeConfig.GetSize();
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
         }
 
         public void DestroyRune()
@@ -38,12 +34,29 @@ namespace Game.Runes
             {
                 Debug.Log("attack rune entered");
                 projectile.SetAttackRuneEntered(true);
+                GetEnemiesInside(projectile);
             }
         }
 
         public bool GetIsBuffRune()
         {
             return runeConfig.GetIsBuffRune();
+        }
+
+        public void GetEnemiesInside(Projectile projectile)
+        {
+            var radius = gameObject.GetComponent<CircleCollider2D>().radius;
+            radius = radius * runeConfig.size;
+            var hitColliders = Physics2D.OverlapCircleAll(transform.position, radius, layerMask);
+            foreach(var hitCollider in hitColliders)
+            {
+                if (hitCollider.tag == "Enemy")
+                {
+                    Debug.Log("enemy in rune");
+                    var health = hitCollider.GetComponentInChildren<Health>();
+                    health.DealDamage((int)(projectile.damage * damageReductionInRune));
+                }
+            }
         }
     } 
 }
