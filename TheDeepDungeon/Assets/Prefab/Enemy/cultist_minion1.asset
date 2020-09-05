@@ -9,13 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15041635585138a46b47bdd8e16ac55b, type: 3}
-  m_Name: Power Rune
+  m_Script: {fileID: 11500000, guid: 59094c6269a5f7648b6b4c4cd12c4266, type: 3}
+  m_Name: cultist_minion1
   m_EditorClassIdentifier: 
-  lifeTime: 6
-  size: 1
-  cost: 3
-  IsBuffRune: 1
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 512
+  baseMaxHealth: 30
+  baseMoveSpeed: 5.5
+  baseDamange: 8

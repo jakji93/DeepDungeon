@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &666990250746068884
+--- !u!114 &3664899834118980421
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runeConfig: {fileID: 11400000, guid: b438e66fe6c8fd14ca0c05f10650d5f0, type: 2}
+  damageIncrease: 0.5
 --- !u!1001 &409857904895459680
 PrefabInstance:
   m_ObjectHideFlags: 0

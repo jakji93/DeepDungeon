@@ -30,7 +30,7 @@ public class ActivateRune : MonoBehaviour
     private void ActiveRune(GameObject rune)
     {
         var currentRune = GameObject.FindWithTag(rune.tag);
-        if (currentRune != null) Destroy(currentRune);
+        if (currentRune != null) currentRune.GetComponent<IRune>().DestroyRune();
         var isBuffRune = rune.GetComponent<IRune>().GetIsBuffRune();
         if (isBuffRune) Instantiate(rune, GameObject.FindWithTag("Player").transform.position, Quaternion.identity);
         else Instantiate(rune, transform.position, Quaternion.identity);

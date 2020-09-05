@@ -32,6 +32,8 @@ public class Health : MonoBehaviour
     {
         if(animator != null) animator.SetTrigger("death");
         isAlreadyDead = true;
+        //testing only
+        RegenerateHealth(maxHealth);
         Destroy(gameObject);
     }
 

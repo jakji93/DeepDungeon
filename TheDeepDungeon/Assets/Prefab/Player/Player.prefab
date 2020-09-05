@@ -233,7 +233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 5607628985575525462, guid: 547c69da608e58345bd504caf20af1dc,
     type: 3}
-  attackSpeed: 0.4
+  timeBetweenShots: 0.5
   shootingPostion: {fileID: 5408440016518852031}
 --- !u!1 &4868301612777508447
 GameObject:

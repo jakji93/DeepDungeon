@@ -11,25 +11,6 @@ namespace Game.Runes
         public float size;
         public int cost;
         public bool IsBuffRune;
-
-        public float GetLifeTime()
-        {
-            return lifeTime;
-        }
-
-        public float GetSize()
-        {
-            return size;
-        }
-
-        public int GetCost()
-        {
-            return cost;
-        }
-
-        public bool GetIsBuffRune()
-        {
-            return IsBuffRune;
-        }
+        public LayerMask layerMask;
     } 
 }

@@ -8,14 +8,13 @@ namespace Game.Runes
     public class AttackRune : MonoBehaviour, IProjectileInteract, IRune
     {
         public RuneConfig runeConfig;
-        public LayerMask layerMask;
         public float damageReductionInRune;
 
         // Start is called before the first frame update
         void Start()
         {
-            Invoke("DestroyRune", runeConfig.GetLifeTime());
-            transform.localScale = transform.localScale * runeConfig.GetSize();
+            Invoke("DestroyRune", runeConfig.lifeTime);
+            transform.localScale = transform.localScale * runeConfig.size;
         }
 
         public void DestroyRune()
@@ -25,14 +24,13 @@ namespace Game.Runes
 
         public int GetCost()
         {
-            return runeConfig.GetCost();
+            return runeConfig.cost;
         }
 
         public void Interact(Projectile projectile)
         {
             if (!projectile.GetAttackedRuneEntered())
             {
-                Debug.Log("attack rune entered");
                 projectile.SetAttackRuneEntered(true);
                 GetEnemiesInside(projectile);
             }
@@ -40,19 +38,18 @@ namespace Game.Runes
 
         public bool GetIsBuffRune()
         {
-            return runeConfig.GetIsBuffRune();
+            return runeConfig.IsBuffRune;
         }
 
-        public void GetEnemiesInside(Projectile projectile)
+        private void GetEnemiesInside(Projectile projectile)
         {
             var radius = gameObject.GetComponent<CircleCollider2D>().radius;
             radius = radius * runeConfig.size;
-            var hitColliders = Physics2D.OverlapCircleAll(transform.position, radius, layerMask);
+            var hitColliders = Physics2D.OverlapCircleAll(transform.position, radius, runeConfig.layerMask);
             foreach(var hitCollider in hitColliders)
             {
                 if (hitCollider.tag == "Enemy")
                 {
-                    Debug.Log("enemy in rune");
                     var health = hitCollider.GetComponentInChildren<Health>();
                     health.DealDamage((int)(projectile.damage * damageReductionInRune));
                 }
