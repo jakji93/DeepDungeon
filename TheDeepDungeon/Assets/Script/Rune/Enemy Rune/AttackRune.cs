@@ -5,27 +5,9 @@ using UnityEngine;
 
 namespace Game.Runes
 {
-    public class AttackRune : MonoBehaviour, IProjectileInteract, IRune
+    public class AttackRune : EnemyRune, IProjectileInteract
     {
-        public RuneConfig runeConfig;
         public float damageReductionInRune;
-
-        // Start is called before the first frame update
-        void Start()
-        {
-            Invoke("DestroyRune", runeConfig.lifeTime);
-            transform.localScale = transform.localScale * runeConfig.size;
-        }
-
-        public void DestroyRune()
-        {
-            Destroy(gameObject);
-        }
-
-        public int GetCost()
-        {
-            return runeConfig.cost;
-        }
 
         public void Interact(Projectile projectile)
         {
@@ -36,9 +18,14 @@ namespace Game.Runes
             }
         }
 
-        public bool GetIsBuffRune()
+        private void Update()
         {
-            return runeConfig.IsBuffRune;
+            
+        }
+
+        public override void WhenEnemyEnters()
+        {
+            return;
         }
 
         private void GetEnemiesInside(Projectile projectile)

@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 2ac827f2cfdca154b981429bce8d2bb1
+guid: 0f588757a9a389a4a91b4f7c795e565b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7141882065842609021
-    second: Minor_enemy1_idle 1_0
+      213: -5652734407457496490
+    second: Minor_enemy1_attack_0
   - first:
-      213: -1292811945206388129
-    second: Minor_enemy1_idle 1_1
+      213: 6824286642990034890
+    second: Minor_enemy1_attack_1
   - first:
-      213: -4619312386992361798
-    second: Minor_enemy1_idle 1_2
+      213: 1083935192856924919
+    second: Minor_enemy1_attack_2
   - first:
-      213: -5357814497133544932
-    second: Minor_enemy1_idle 1_3
+      213: 1085632739842698329
+    second: Minor_enemy1_attack_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -110,85 +110,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Minor_enemy1_idle 1_0
+      name: Minor_enemy1_attack_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
+        width: 69
         height: 70
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.26086956, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da1fd5d30da1e7e46bfe182213b831b5
-      internalID: -7141882065842609021
+      spriteID: 99a4a7b8a5ca2b746ac3bf9f19cf9a32
+      internalID: -5652734407457496490
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minor_enemy1_idle 1_1
+      name: Minor_enemy1_attack_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 69
         y: 0
-        width: 32
+        width: 69
         height: 70
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.26086956, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 295e2029483b2bb4da910358b9142542
-      internalID: -1292811945206388129
+      spriteID: 3f1852509e53960479d11405efebc180
+      internalID: 6824286642990034890
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minor_enemy1_idle 1_2
+      name: Minor_enemy1_attack_2
       rect:
         serializedVersion: 2
-        x: 64
+        x: 138
         y: 0
-        width: 32
+        width: 69
         height: 70
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.26086956, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b07823214739d6c4381d3bcd0fc0d40e
-      internalID: -4619312386992361798
+      spriteID: 789c179f1f6a9834d93c10e8fabbf4cf
+      internalID: 1083935192856924919
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minor_enemy1_idle 1_3
+      name: Minor_enemy1_attack_3
       rect:
         serializedVersion: 2
-        x: 96
+        x: 207
         y: 0
-        width: 32
+        width: 69
         height: 70
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.26086956, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8994a48d6e194d54fbf9be034531e291
-      internalID: -5357814497133544932
+      spriteID: 18e313a2b52a4f24c8edc45387a39b8d
+      internalID: 1085632739842698329
       vertices: []
       indices: 
       edges: []
