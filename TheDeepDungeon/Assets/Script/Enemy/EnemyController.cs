@@ -16,15 +16,14 @@ namespace Game.Enemies
         public float attackRange;
         public Transform attackPoint;
 
+        [Header("Enemy Type")]
+        public EnemyType enemyType;
+
         private bool playerDetected = false;
         private Transform player;
         private CircleCollider2D collider;
 
         // Start is called before the first frame update
-        private void Awake()
-        {
-            gameObject.GetComponent<Health>().maxHealth = enemyConfig.baseMaxHealth;
-        }
 
         void Start()
         {
@@ -35,7 +34,7 @@ namespace Game.Enemies
         private void OnDrawGizmosSelected()
         {
             Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(transform.position, attackRange);
+            Gizmos.DrawWireCube(attackPoint.position, new Vector2(3f, 1.5f));
         }
 
         // Update is called once per frame
@@ -95,6 +94,11 @@ namespace Game.Enemies
         {
             if(target.x < from.x) gameObject.transform.localScale = new Vector2(-1f, 1f);
             else gameObject.transform.localScale = new Vector2(1f, 1f);
+        }
+
+        public void Attack()
+        {
+            enemyType.Attack(enemyConfig.baseDamange, attackPoint);
         }
     } 
 }

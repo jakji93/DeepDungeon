@@ -1,19 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Game.Enemies;
 
 public class Health : MonoBehaviour
 {
-    public int maxHealth;
+    public EnemyConfig enemyConfig;
     public Animator animator;
     public HealthBarDisplay healthDisplay;
 
     private int currentHealth;
+    private int maxHealth;
     private bool isAlreadyDead = false;
 
     private void Start()
     {
-        currentHealth = maxHealth;
+        currentHealth = enemyConfig.baseMaxHealth;
+        maxHealth = enemyConfig.baseMaxHealth;
         if (healthDisplay != null) healthDisplay.SetHealth(currentHealth, maxHealth);
     }
 
@@ -30,10 +33,9 @@ public class Health : MonoBehaviour
 
     private void Death()
     {
+        //TODO
         if(animator != null) animator.SetTrigger("death");
         isAlreadyDead = true;
-        //testing only
-        RegenerateHealth(maxHealth);
         Destroy(gameObject);
     }
 

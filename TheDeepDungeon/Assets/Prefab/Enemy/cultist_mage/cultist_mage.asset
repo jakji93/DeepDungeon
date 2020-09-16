@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59094c6269a5f7648b6b4c4cd12c4266, type: 3}
-  m_Name: testin1
+  m_Name: cultist_mage
   m_EditorClassIdentifier: 
-  baseMaxHealth: 20
-  baseMoveSpeed: 2
-  baseDamange: 8
+  baseMaxHealth: 64
+  baseMoveSpeed: 3.5
+  baseDamange: 15

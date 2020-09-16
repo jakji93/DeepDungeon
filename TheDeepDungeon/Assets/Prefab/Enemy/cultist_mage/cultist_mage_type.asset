@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59094c6269a5f7648b6b4c4cd12c4266, type: 3}
-  m_Name: New Enemy Config
+  m_Script: {fileID: 11500000, guid: 65ecea83bf1811f42a7eeeacc9e7eef5, type: 3}
+  m_Name: cultist_mage_type
   m_EditorClassIdentifier: 
-  baseMaxHealth: 20
-  baseMoveSpeed: 7
-  baseDamange: 8
+  projectile: {fileID: 8738402658623936669, guid: 79852f19372a5c04fa2d92353eccb858,
+    type: 3}

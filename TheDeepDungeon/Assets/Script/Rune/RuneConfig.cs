@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Game.Runes
 {
-    [CreateAssetMenu(menuName = "Rune Config")]
+    [CreateAssetMenu(menuName = "Configuration/Rune Config")]
     public class RuneConfig : ScriptableObject
     {
         public float lifeTime;

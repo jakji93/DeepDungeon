@@ -12,6 +12,7 @@ namespace Game.Projectiles
         public LayerMask whatIsSolid;
         public GameObject destroyObject;
         public List<string> tagNames;
+        public float leftOverTime;
 
         private bool isAttackRuneEntered = false;
         private bool isEnemyHit = false;
@@ -46,8 +47,11 @@ namespace Game.Projectiles
 
         public void DestroyProjectile()
         {
-            GameObject cubeLeftOver = Instantiate(destroyObject, transform.position, Quaternion.identity);
-            Destroy(cubeLeftOver, 0.2f);
+            if (destroyObject != null)
+            {
+                GameObject leftOver = Instantiate(destroyObject, transform.position, Quaternion.identity);
+                Destroy(leftOver, leftOverTime);
+            }
             Destroy(gameObject);
         }
 
