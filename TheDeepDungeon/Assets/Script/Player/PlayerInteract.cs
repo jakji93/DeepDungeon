@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Game.Projectiles;
+using Game.Melees;
 
 namespace Game.Players
 {
-    public class PlayerInteract : MonoBehaviour, IProjectileInteract
+    public class PlayerInteract : MonoBehaviour, IProjectileInteract, IMeleeInteract
     {
-        public Health health;
+        public PlayerHealth health;
 
         public void Interact(Projectile projectile)
         {
@@ -15,5 +16,9 @@ namespace Game.Players
             projectile.DestroyProjectile();
         }
 
+        public void Interact(int damage)
+        {
+            if (health != null) health.DealDamage(damage);
+        }
     } 
 }

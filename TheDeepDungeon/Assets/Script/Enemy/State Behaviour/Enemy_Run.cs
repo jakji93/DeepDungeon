@@ -23,7 +23,7 @@ namespace Game.Enemies
             rb = animator.transform.parent.GetComponent<Rigidbody2D>();
             rb.bodyType = RigidbodyType2D.Dynamic;
             footCollider = rb.GetComponent<Collider2D>();
-            footCollider.enabled = true;
+            footCollider.isTrigger = false;
             speed = enemyController.enemyConfig.baseMoveSpeed;
             lastKnownLocation = enemyController.GetPlayerLocationV3();
             lastKnownLocations.Add(enemyController.GetPlayerLocationV3());
@@ -44,7 +44,7 @@ namespace Game.Enemies
                 if (enemyController.IsPlayerInAttackRange())
                 {
                     rb.bodyType = RigidbodyType2D.Static;
-                    footCollider.enabled = false;
+                    footCollider.isTrigger = true;
                     animator.SetTrigger("isAttacking");
                 }
             }

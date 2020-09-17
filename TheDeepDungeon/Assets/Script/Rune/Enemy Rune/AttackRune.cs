@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Game.Stats;
 
 namespace Game.Runes
 {
@@ -37,7 +38,7 @@ namespace Game.Runes
             {
                 if (hitCollider.tag == "Enemy")
                 {
-                    var health = hitCollider.GetComponentInChildren<Health>();
+                    var health = hitCollider.GetComponent<BaseHealth>();
                     health.DealDamage((int)(projectile.damage * damageReductionInRune));
                 }
             }

@@ -61,7 +61,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knowBackFroce: 1000
-  health: {fileID: 415358172930188269}
+  health: {fileID: 1162307380739979114}
   rb: {fileID: 5612187750898534169}
   animator: {fileID: 4359290854031115738}
 --- !u!1 &1610296931166540872
@@ -73,10 +73,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1933013876315340710}
-  - component: {fileID: 415358172930188269}
   - component: {fileID: 7391507969013500114}
   - component: {fileID: 5612187750898534169}
   - component: {fileID: 8555942866846312398}
+  - component: {fileID: 1162307380739979114}
   m_Layer: 11
   m_Name: cultist_mage
   m_TagString: Enemy
@@ -102,21 +102,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &415358172930188269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1610296931166540872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c2f07e21a0f14347aa5741d4d37db6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyConfig: {fileID: 11400000, guid: a9a595af24c65f74a903ed2de527d55f, type: 2}
-  animator: {fileID: 0}
-  healthDisplay: {fileID: 2561272264566655573}
 --- !u!114 &7391507969013500114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,6 +159,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.8
+--- !u!114 &1162307380739979114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610296931166540872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1508f4d24a1c5d488c41853548621b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  config: {fileID: 11400000, guid: a9a595af24c65f74a903ed2de527d55f, type: 2}
+  animator: {fileID: 0}
+  healthDisplay: {fileID: 2561272264566655573}
 --- !u!1 &5566016514268141187
 GameObject:
   m_ObjectHideFlags: 0

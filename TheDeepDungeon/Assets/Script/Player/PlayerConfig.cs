@@ -1,15 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Game.Stats;
 
 namespace Game.Players
 {
     [CreateAssetMenu(menuName = "Configuration/Player Config")]
-    public class PlayerConfig : ScriptableObject
+    public class PlayerConfig : BaseConfig
     {
-        public int baseMaxHealth;
-        public float baseMoveSpeed;
-        public int baseDamange;
         public float baseAttackSpeed;
     } 
 }

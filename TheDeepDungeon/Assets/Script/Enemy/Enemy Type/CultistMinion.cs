@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Game.Melees;
 
 namespace Game.Enemies
 {
@@ -17,7 +18,8 @@ namespace Game.Enemies
             {
                 if(collid.tag == "Body")
                 {
-                    Debug.Log("player hit");
+                    var interact = collid.gameObject.GetComponent<IMeleeInteract>();
+                    interact.Interact(damage);
                 }
             }
         }

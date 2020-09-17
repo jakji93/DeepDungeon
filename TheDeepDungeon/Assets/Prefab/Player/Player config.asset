@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34cae5d17b1900f45bf7129f4e0f5abd, type: 3}
   m_Name: Player config
   m_EditorClassIdentifier: 
-  baseMaxHealth: 100
+  baseMaxHealth: 150
   baseMoveSpeed: 8
   baseDamange: 15
   baseAttackSpeed: 0.5

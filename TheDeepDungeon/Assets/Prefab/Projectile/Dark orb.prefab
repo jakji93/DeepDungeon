@@ -145,3 +145,4 @@ MonoBehaviour:
   - Body
   - ProjectileWall
   leftOverTime: 3
+  radius: 0.4

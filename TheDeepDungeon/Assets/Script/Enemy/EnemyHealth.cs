@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using Game.Stats;
 
-namespace Game.Players
+namespace Game.Enemies
 {
-    public class PlayerHealth : BaseHealth
+    public class EnemyHealth : BaseHealth
     {
-        //temp display
         public HealthBarDisplay healthDisplay;
 
         private void Start()
@@ -19,6 +18,8 @@ namespace Game.Players
         public override void Death()
         {
             if (animator != null) animator.SetTrigger("death");
+            isAlreadyDead = true;
+            Destroy(gameObject);
         }
 
         public override void DealDamage(int damage)

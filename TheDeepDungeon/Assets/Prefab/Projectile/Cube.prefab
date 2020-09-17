@@ -146,3 +146,4 @@ MonoBehaviour:
   - ProjectileWall
   - AttackRune
   leftOverTime: 0.2
+  radius: 0.17

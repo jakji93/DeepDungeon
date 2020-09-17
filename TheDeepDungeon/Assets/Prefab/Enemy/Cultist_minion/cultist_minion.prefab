@@ -219,7 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knowBackFroce: 1000
-  health: {fileID: 7156307061238852539}
+  health: {fileID: 8745617212573758298}
   rb: {fileID: -6092923533974384817}
   animator: {fileID: 6551794879669702028}
 --- !u!1 &8127596358293560350
@@ -231,10 +231,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8953323960278251504}
-  - component: {fileID: 7156307061238852539}
   - component: {fileID: 2135490692}
   - component: {fileID: -6092923533974384817}
   - component: {fileID: 1166214468118818712}
+  - component: {fileID: 8745617212573758298}
   m_Layer: 11
   m_Name: cultist_minion
   m_TagString: Enemy
@@ -260,21 +260,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7156307061238852539
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8127596358293560350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c2f07e21a0f14347aa5741d4d37db6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyConfig: {fileID: 11400000, guid: b891814ee4c7e6d4f88ad2bd7cc7225e, type: 2}
-  animator: {fileID: 0}
-  healthDisplay: {fileID: 4978904040458125827}
 --- !u!114 &2135490692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,6 +317,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.6
+--- !u!114 &8745617212573758298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8127596358293560350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1508f4d24a1c5d488c41853548621b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  config: {fileID: 11400000, guid: b891814ee4c7e6d4f88ad2bd7cc7225e, type: 2}
+  animator: {fileID: 0}
+  healthDisplay: {fileID: 4978904040458125827}
 --- !u!1001 &5426321936870906361
 PrefabInstance:
   m_ObjectHideFlags: 0

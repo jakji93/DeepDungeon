@@ -13,11 +13,18 @@ namespace Game.Projectiles
         public GameObject destroyObject;
         public List<string> tagNames;
         public float leftOverTime;
+        public float radius;
 
         private bool isAttackRuneEntered = false;
         private bool isEnemyHit = false;
 
         // Start is called before the first frame update
+        private void OnDrawGizmosSelected()
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(transform.position, radius);
+        }
+
         void Start()
         {
             Invoke("DestroyProjectile", lifeTime);
@@ -27,18 +34,15 @@ namespace Game.Projectiles
         {
             Vector2 currentPosition = new Vector2(transform.position.x, transform.position.y);
             Vector2 newPosition = currentPosition + (Vector2)transform.up * speed * Time.deltaTime;
-            var hitInfos = Physics2D.RaycastAll(transform.position, transform.up, speed * Time.deltaTime, whatIsSolid);
+            var hitInfos = Physics2D.OverlapCircleAll(transform.position, radius, whatIsSolid);
             foreach (var hitInfo in hitInfos)
             {
-                if (hitInfo.collider != null)
+                if (hitInfo != null)
                 {
-                    if (tagNames.Contains(hitInfo.collider.tag))
+                    if (tagNames.Contains(hitInfo.tag))
                     {
-                        var interacts = hitInfo.collider.gameObject.GetComponents<IProjectileInteract>();
-                        foreach (var interact in interacts)
-                        {
-                            interact.Interact(this);
-                        }
+                        var interact = hitInfo.gameObject.GetComponent<IProjectileInteract>();
+                        interact.Interact(this);
                     }
                 }
             }
