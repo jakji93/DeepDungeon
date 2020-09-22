@@ -9,5 +9,7 @@ namespace Game.Players
     public class PlayerConfig : BaseConfig
     {
         public float baseAttackSpeed;
+        public int baseMana;
+        public float baseManaRegenTime;
     } 
 }

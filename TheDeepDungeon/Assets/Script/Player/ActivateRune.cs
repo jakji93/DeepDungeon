@@ -10,16 +10,18 @@ namespace Game.Players
         public GameObject rune1;
         public GameObject rune2;
 
+        public RuneController controller;
+
         // Update is called once per frame
         void Update()
         {
             if (Input.GetButtonDown("Fire1"))
             {
-                ActiveRune(rune1);
+                if(CanActive(rune1)) ActiveRune(rune1);
             }
             if (Input.GetButtonDown("Fire2"))
             {
-                ActiveRune(rune2);
+                if (CanActive(rune2)) ActiveRune(rune2);
             }
         }
 
@@ -30,6 +32,12 @@ namespace Game.Players
             var isBuffRune = rune.GetComponent<IRune>().GetIsBuffRune();
             if (isBuffRune) Instantiate(rune, GameObject.FindWithTag("Player").transform.position, Quaternion.identity);
             else Instantiate(rune, transform.position, Quaternion.identity);
+        }
+
+        private bool CanActive(GameObject rune)
+        {
+            var runeCost = rune.GetComponent<IRune>().GetCost();
+            return controller.IsConsumeMana(runeCost);
         }
     } 
 }
