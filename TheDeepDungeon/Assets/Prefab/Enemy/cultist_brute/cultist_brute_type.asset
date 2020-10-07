@@ -9,12 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34cae5d17b1900f45bf7129f4e0f5abd, type: 3}
-  m_Name: Player config
+  m_Script: {fileID: 11500000, guid: 4d6a991e05ec0a7458b6038363f642e4, type: 3}
+  m_Name: cultist_brute_type
   m_EditorClassIdentifier: 
-  baseMaxHealth: 100
-  baseMoveSpeed: 7
-  baseDamange: 15
-  baseAttackSpeed: 0.5
-  baseMana: 10
-  baseManaRegenTime: 1
+  attackRadius: 2.3
+  attackMask:
+    serializedVersion: 2
+    m_Bits: 512

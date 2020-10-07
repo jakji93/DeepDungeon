@@ -45,11 +45,11 @@ namespace Game.Runes
             {
                 if (hitCollider.tag == "Enemy")
                 {
-                    WhenEnemyEnters();
+                    WhenEnemyEnters(hitCollider);
                 }
             }
         }
 
-        public abstract void WhenEnemyEnters();
+        public abstract void WhenEnemyEnters(Collider2D enemy);
     } 
 }

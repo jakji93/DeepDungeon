@@ -10,6 +10,7 @@ TagManager:
   - AttackRune
   - PowerRune
   - Enemy
+  - Foot
   layers:
   - Default
   - TransparentFX

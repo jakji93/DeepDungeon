@@ -57,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 24
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -115,16 +115,16 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 68
-        height: 119
+        width: 90
+        height: 130
       alignment: 9
-      pivot: {x: 0.31617647, y: 0.5714286}
+      pivot: {x: 0.35, y: 0.6076923}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2040cbceb7f19d488b68d322564ff9b
+      spriteID: 01002b99b216220449a854060f377854
       internalID: 6013311385066790630
       vertices: []
       indices: 
@@ -134,18 +134,18 @@ TextureImporter:
       name: cultist_brute_attack_1
       rect:
         serializedVersion: 2
-        x: 68
+        x: 90
         y: 0
-        width: 68
-        height: 119
+        width: 90
+        height: 130
       alignment: 9
-      pivot: {x: 0.31617647, y: 0.5714286}
+      pivot: {x: 0.35, y: 0.6076923}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec553f75237754a4497e2fbfa0b7804b
+      spriteID: 789310586cf9dcb4dbceb1d72c46ff7b
       internalID: 886792542522904332
       vertices: []
       indices: 
@@ -155,18 +155,18 @@ TextureImporter:
       name: cultist_brute_attack_2
       rect:
         serializedVersion: 2
-        x: 136
+        x: 180
         y: 0
-        width: 68
-        height: 119
+        width: 90
+        height: 130
       alignment: 9
-      pivot: {x: 0.31617647, y: 0.5714286}
+      pivot: {x: 0.35, y: 0.6076923}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e647efb810bbeef47806b964b7a62a02
+      spriteID: 3a4b0e6fb5fefc64a830b3d476b9a779
       internalID: -8839279082384479261
       vertices: []
       indices: 
@@ -176,18 +176,18 @@ TextureImporter:
       name: cultist_brute_attack_3
       rect:
         serializedVersion: 2
-        x: 204
+        x: 270
         y: 0
-        width: 68
-        height: 119
+        width: 90
+        height: 130
       alignment: 9
-      pivot: {x: 0.31617647, y: 0.5714286}
+      pivot: {x: 0.35, y: 0.6076923}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 844c9db4f58b4a2499139634ac065c10
+      spriteID: 67eb9d6b453d8b141a02ec7cea237356
       internalID: 5246859698360589200
       vertices: []
       indices: 

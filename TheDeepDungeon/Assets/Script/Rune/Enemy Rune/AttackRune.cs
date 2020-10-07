@@ -24,7 +24,7 @@ namespace Game.Runes
             
         }
 
-        public override void WhenEnemyEnters()
+        public override void WhenEnemyEnters(Collider2D enemy)
         {
             return;
         }

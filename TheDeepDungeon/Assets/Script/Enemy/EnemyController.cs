@@ -34,7 +34,7 @@ namespace Game.Enemies
         private void OnDrawGizmosSelected()
         {
             Gizmos.color = Color.red;
-            Gizmos.DrawWireCube(attackPoint.position, new Vector2(3f, 1.5f));
+            Gizmos.DrawWireSphere(attackPoint.position, attackRange);
         }
 
         // Update is called once per frame
