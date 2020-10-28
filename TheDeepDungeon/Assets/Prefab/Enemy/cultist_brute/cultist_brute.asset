@@ -15,3 +15,6 @@ MonoBehaviour:
   baseMaxHealth: 140
   baseMoveSpeed: 4
   baseDamange: 30
+  coinMinDropAmount: 2
+  coinMaxDropAmount: 8
+  coinDropChancec: 20

@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using Game.Projectiles;
 using Game.Melees;
+using Game.Pickups;
 
 namespace Game.Players
 {
-    public class PlayerInteract : MonoBehaviour, IProjectileInteract, IMeleeInteract
+    public class PlayerInteract : MonoBehaviour, IProjectileInteract, IMeleeInteract, IPickupInteract
     {
         public PlayerHealth health;
 
@@ -19,6 +20,12 @@ namespace Game.Players
         public void Interact(int damage)
         {
             if (health != null) health.DealDamage(damage);
+        }
+
+        public void Interact(Pickup pickup)
+        {
+            //not  yet resourceSystem(pickup);
+            pickup.DestroyPickup();
         }
     } 
 }

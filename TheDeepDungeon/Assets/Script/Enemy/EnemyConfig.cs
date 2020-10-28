@@ -8,5 +8,9 @@ namespace Game.Enemies
     [CreateAssetMenu(menuName = "Configuration/Enemy Config")]
     public class EnemyConfig : BaseConfig
     {
+        public int coinMinDropAmount;
+        public int coinMaxDropAmount;
+        [Range(0f, 100f)]
+        public float coinDropChancec;
     } 
 }
