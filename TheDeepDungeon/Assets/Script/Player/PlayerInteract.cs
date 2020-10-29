@@ -10,6 +10,7 @@ namespace Game.Players
     public class PlayerInteract : MonoBehaviour, IProjectileInteract, IMeleeInteract, IPickupInteract
     {
         public PlayerHealth health;
+        public PlayerResource resource;
 
         public void Interact(Projectile projectile)
         {
@@ -24,7 +25,8 @@ namespace Game.Players
 
         public void Interact(Pickup pickup)
         {
-            //not  yet resourceSystem(pickup);
+            //not  yet: check for coin or health or orb?
+            resource.AddCoin(pickup.PickupInteract());
             pickup.DestroyPickup();
         }
     } 

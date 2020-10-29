@@ -165,6 +165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 8623485475501000529}
+  resource: {fileID: 1506350740376151728}
 --- !u!70 &7040057780528494370
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -195,6 +196,7 @@ GameObject:
   - component: {fileID: 1635970014148971840}
   - component: {fileID: 1417007322}
   - component: {fileID: 8623485475501000529}
+  - component: {fileID: 1506350740376151728}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -314,6 +316,18 @@ MonoBehaviour:
   config: {fileID: 11400000, guid: 38b3d2d869b7210438e13a4100b56649, type: 2}
   animator: {fileID: 0}
   healthDisplay: {fileID: 464089118878008118}
+--- !u!114 &1506350740376151728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635970014536320008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b0d451ad9146e64ba5e9aa9e8027569, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4868301612777508447
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,6 +389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 8623485475501000529}
+  resource: {fileID: 0}
 --- !u!1 &6323223719366738273
 GameObject:
   m_ObjectHideFlags: 0
