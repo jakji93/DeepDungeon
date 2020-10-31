@@ -13,6 +13,13 @@ namespace Game.Pickups
         public float leftOverTime;
 
         public abstract int PickupInteract();
+        public abstract PickupType GetPickupType();
+
+        public enum PickupType
+        {
+            Health,
+            Coin
+        }
 
         private void OnDrawGizmosSelected()
         {

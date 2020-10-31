@@ -25,8 +25,15 @@ namespace Game.Players
 
         public void Interact(Pickup pickup)
         {
-            //not  yet: check for coin or health or orb?
-            resource.AddCoin(pickup.PickupInteract());
+            switch(pickup.GetPickupType())
+            {
+                case Pickup.PickupType.Health:
+                    health.RegenerateHealth(pickup.PickupInteract());
+                    break;
+                default:
+                    resource.AddCoin(pickup.PickupInteract());
+                    break;
+            }
             pickup.DestroyPickup();
         }
     } 

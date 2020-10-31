@@ -11,6 +11,6 @@ namespace Game.Enemies
         public int coinMinDropAmount;
         public int coinMaxDropAmount;
         [Range(0f, 100f)]
-        public float coinDropChancec;
+        public float coinDropChance;
     } 
 }

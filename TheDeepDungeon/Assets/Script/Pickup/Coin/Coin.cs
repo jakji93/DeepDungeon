@@ -8,6 +8,11 @@ namespace Game.Pickups
     {
         private int coinAmount;
 
+        public override PickupType GetPickupType()
+        {
+            return PickupType.Coin;
+        }
+
         public override int PickupInteract()
         {
             return coinAmount;
