@@ -17,4 +17,4 @@ MonoBehaviour:
   baseDamange: 30
   coinMinDropAmount: 2
   coinMaxDropAmount: 8
-  coinDropChancec: 20
+  coinDropChance: 20

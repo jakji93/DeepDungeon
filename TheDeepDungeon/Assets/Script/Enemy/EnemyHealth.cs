@@ -8,6 +8,7 @@ namespace Game.Enemies
     public class EnemyHealth : BaseHealth
     {
         public HealthBarDisplay healthDisplay;
+        public EnemyDrop enemyDrop;
 
         private void Start()
         {
@@ -19,6 +20,7 @@ namespace Game.Enemies
         {
             if (animator != null) animator.SetTrigger("death");
             isAlreadyDead = true;
+            enemyDrop.DropPickup();
             Destroy(gameObject);
         }
 

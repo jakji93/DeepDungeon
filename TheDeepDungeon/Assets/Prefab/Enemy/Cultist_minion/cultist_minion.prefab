@@ -158,6 +158,67 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c8a2f1687df7eb4ca855ae15dcea95a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &3452919245495718694
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3987357578996744159}
+  m_Layer: 11
+  m_Name: Drop Locations
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3987357578996744159
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3452919245495718694}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3478026050605663416}
+  m_Father: {fileID: 8953323960278251504}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5223523769162752730
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3478026050605663416}
+  m_Layer: 11
+  m_Name: Coin Location
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3478026050605663416
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5223523769162752730}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.481, y: -0.075, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3987357578996744159}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7848835999253600005
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,6 +319,7 @@ Transform:
   - {fileID: 3089209816844883036}
   - {fileID: 1444623194075616824}
   - {fileID: 6557436379986986215}
+  - {fileID: 3987357578996744159}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -333,6 +395,7 @@ MonoBehaviour:
   config: {fileID: 11400000, guid: b891814ee4c7e6d4f88ad2bd7cc7225e, type: 2}
   animator: {fileID: 0}
   healthDisplay: {fileID: 4978904040458125827}
+  enemyDrop: {fileID: 5056601609557009573}
 --- !u!114 &5056601609557009573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -345,6 +408,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d7503aa09a1634388a7619783bc5b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  config: {fileID: 11400000, guid: b891814ee4c7e6d4f88ad2bd7cc7225e, type: 2}
+  coin: {fileID: 1070739298871183772, guid: 3f4c2ca09bd92954da9d86cba10a5354, type: 3}
+  health: {fileID: 0}
+  coinDropLocation: {fileID: 3478026050605663416}
 --- !u!1001 &5426321936870906361
 PrefabInstance:
   m_ObjectHideFlags: 0
