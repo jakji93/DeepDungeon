@@ -18,3 +18,6 @@ MonoBehaviour:
   coinMinDropAmount: 2
   coinMaxDropAmount: 8
   coinDropChance: 20
+  healthMinDropAmount: 5
+  healthMaxDropAmount: 2
+  healthDropChance: 10

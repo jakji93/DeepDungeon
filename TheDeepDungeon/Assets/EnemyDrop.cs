@@ -8,9 +8,12 @@ namespace Game.Enemies
     public class EnemyDrop : MonoBehaviour
     {
         public EnemyConfig config;
+        [Header("Coin")]
         public Coin coin;
-        public GameObject health;
         public Transform coinDropLocation;
+        [Header("Health")]
+        public HealthPickup health;
+        public Transform healthDropLocation;
 
         public void DropPickup()
         {
@@ -20,6 +23,13 @@ namespace Game.Enemies
             {
                 Coin coinObject = Instantiate(coin, coinDropLocation.position, Quaternion.identity);
                 coinObject.SetCoinAmount(coinDropAmount);
+            }
+            bool healthDrop = Random.Range(0f, 100f) <= config.healthDropChance;
+            int healthDropAmount = Random.Range(config.healthMinDropAmount, config.healthMaxDropAmount + 1);
+            if (healthDrop)
+            {
+                HealthPickup healthObject = Instantiate(health, healthDropLocation.position, Quaternion.identity);
+                healthObject.SetHealthAmount(healthDropAmount);
             }
         }
     } 

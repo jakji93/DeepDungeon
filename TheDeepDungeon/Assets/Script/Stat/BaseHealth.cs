@@ -36,7 +36,7 @@ namespace Game.Stats
             return isAlreadyDead;
         }
 
-        public void RegenerateHealth(int health)
+        public virtual void RegenerateHealth(int health)
         {
             currentHealth = Mathf.Min(maxHealth, currentHealth + health);
         }

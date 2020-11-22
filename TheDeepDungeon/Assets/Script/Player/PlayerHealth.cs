@@ -26,5 +26,11 @@ namespace Game.Players
             base.DealDamage(damage);
             if (healthDisplay != null) healthDisplay.SetHealth(currentHealth, maxHealth);
         }
+
+        public override void RegenerateHealth(int health)
+        {
+            base.RegenerateHealth(health);
+            if (healthDisplay != null) healthDisplay.SetHealth(currentHealth, maxHealth);
+        }
     } 
 }
